@@ -1,0 +1,92 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/card-form.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="cards-form">
+            <form id="ccForm" novalidate>
+                <div class="card">
+                    <h1>Payment Information</h1>
+                    <div class="row cardholder">
+                        <div class="info">
+                            <label for="cardholdername">Name</label>
+                            <input placeholder="e.g. Tapan Dave" maxlength="20" minlength="2" id="ccName" type="text"
+                                required />
+                        </div>
+                    </div>
+                    <div class="row number">
+                        <div class="info">
+                            <label for="ccNumber">Card number</label>
+                            <input id="ccNumber" type="tel" name="cc-number" maxlength="19" value=""
+                                pattern="^[0-9 ]{4}\s[0-9 ]{4}\s[0-9 ]{4}\s[0-9 ]{4}|[0-9 ]{4}\s[0-9 ]{6}\s[0-9 ]{5}$"
+                                required placeholder="8888-8888-8888-8888" />
+                            <svg id="ccIcon" class="cc-icon" width="750" height="471" viewBox="0 0 750 471"
+                                version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="row details">
+                        <div class="left">
+                            <label for="expiryMonth">Expiry</label>
+                            <select id="expiryMonth" required disabled>
+                                <option selected value="">MM</option>
+                                <option value="1">01</option>
+                                <option value="2">02</option>
+                                <option value="3">03</option>
+                                <option value="4">04</option>
+                                <option value="5">05</option>
+                                <option value="6">06</option>
+                                <option value="7">07</option>
+                                <option value="8">08</option>
+                                <option value="9">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+                            <span>/</span>
+                            <select id="expiryYear" required disabled>
+                                <option selected value="">YYYY</option>
+                                <option value="2020">2020</option>
+                                <option value="2021">2021</option>
+                                <option value="2022">2022</option>
+                                <option value="2023">2023</option>
+                                <option value="2024">2024</option>
+                                <option value="2025">2025</option>
+                                <option value="2026">2026</option>
+                                <option value="2027">2027</option>
+                                <option value="2028">2028</option>
+                                <option value="2029">2029</option>
+                                <option value="2030">2030</option>
+                            </select>
+                        </div>
+                        <div class="right">
+                            <label for="securityCode">CVV</label>
+                            <input placeholder="123" id="securityCode" type="password" pattern="[0-9]*" disabled
+                                maxLength="3" minLength="3" required />
+                        </div>
+                    </div>
+                </div>
+                <div class="button">
+                    <button type="submit"><i class="ion-locked"></i> Confirm and Pay</button>
+                </div>
+            </form>
+        </div>
+        <div class="saved-cards" id="savedCC">
+        </div>
+        <script src="js/card.js"></script>
+</body>
+
+
+</html>
