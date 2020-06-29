@@ -1,0 +1,14 @@
+{
+  "name": "cardui-assignment",
+  "version": "1.0.0",
+  "description": "assignment",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Tapan Dave",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
